@@ -265,7 +265,6 @@ function toggleKaraoke() {
   audio.load();
 
   audio.onloadedmetadata = () => {
-    audio.currentTime = currentTime;
     if (wasPlaying) audio.play();
   };
 
