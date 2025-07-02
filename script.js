@@ -245,3 +245,29 @@ window.onload = () => {
   updatePlayIcons();
   mainPlay.onclick = (e) => togglePlay(e);
 };
+function toggleKaraoke() {
+  const track = tracks[currentIndex];
+  const currentTime = audio.currentTime;
+  const wasPlaying = !audio.paused;
+
+  const newSrc = karaokeMode
+    ? track.instrumental
+    : track.path;
+
+  if (karaokeMode && !track.instrumental) {
+    alert("Hiện chưa có bản không lời");
+    karaokeMode = false;
+    toggleKaraokeBtn.innerText = "Chế độ Karaoke";
+    return;
+  }
+
+  audio.src = newSrc;
+  audio.load();
+
+  audio.onloadedmetadata = () => {
+    audio.currentTime = currentTime;
+    if (wasPlaying) audio.play();
+  };
+
+  toggleKaraokeBtn.innerText = karaokeMode ? "Tắt Karaoke" : "Chế độ Karaoke";
+}
