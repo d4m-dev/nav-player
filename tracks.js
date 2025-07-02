@@ -11,7 +11,7 @@ const tracks = [
     name: "Em Đồng Ý | I Do",
     artist: "ĐỨC PHÚC x 911 x KHẮC HƯNG  OFFICIAL",
     artwork: "https://i.postimg.cc/TYDMgYZM/1.jpg",
-    path: "https://github.com/d4m-dev/media/raw/main/weddingsongs/ido.mp3",
+    path: "https://github.com/d4m-dev/media/raw/main/weddingsongs/music_ido.mp3",
     instrumental: "https://github.com/d4m-dev/media/raw/main/weddingsongs/3.mp3",
     lyric: "https://raw.githubusercontent.com/d4m-dev/media/main/weddingsongs/1.lrc",
   },
